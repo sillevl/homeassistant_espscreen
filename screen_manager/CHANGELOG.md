@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add an experimental Seeed SenseCAP Indicator D1L GX profile for Wi-Fi, display and touch. Keep LoRa and RP2040 peripherals disabled, and retain the conservative 64-tile/eight-page limits.
+
 ## 0.4.88 (firmware 0.56.0)
 
 - **A screen that runs well no longer shows an old failed update.** An update that failed (for instance because another

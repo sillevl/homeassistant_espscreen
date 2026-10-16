@@ -1,0 +1,6 @@
+# Stable hardware IDs used by an owner's Override YAML.
+substitutions:
+  BACKLIGHT_FREQUENCY: "150Hz"
+light:
+  - id: !extend back_light
+    default_transition_length: 200ms
