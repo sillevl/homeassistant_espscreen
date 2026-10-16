@@ -84,8 +84,8 @@ four corners, the real Tessera/LVGL settings interface, Home Assistant pairing, 
 and lamp control. This is limited proof on an individual setup, not a guarantee for every hardware revision.
 
 The catalog integration and generated checkout entry are a separate packaging step.
-Rotation, cold boot, settings persistence, dimming/standby, firmware updates, sustained load and
-the oldest supported ESPHome version still need acceptance on the final packaged profile.
+Rotation, cold boot, settings persistence, dimming/standby, firmware updates and sustained load
+still need acceptance on the final packaged profile.
 The board remains experimental.
 
 ## Primary references
