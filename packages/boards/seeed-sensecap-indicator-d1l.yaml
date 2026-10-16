@@ -19,8 +19,11 @@ substitutions:
   GRID_COLS: "2"
   GRID_ROWS: "3"
   # Start with one eighth of a framebuffer, preserving internal RAM headroom.
-  # No claim about safe tile capacity; core defaults remain 64 tiles/8 pages.
   LVGL_BUFFER_SIZE: "12%"
+  # S3 PSRAM ceilings; runtime memory budgeting still limits a layout.
+  SCREEN_MAX_TILES: "128"
+  SCREEN_MAX_PAGES: "24"
+  SCREEN_MAX_BAR_ITEMS: "12"
   BACKLIGHT_FREQUENCY: "100Hz"
   TOUCH_CONTROLLER: "FT6336U"
   TOUCH_MIRROR_X: "true"

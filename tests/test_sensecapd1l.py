@@ -46,8 +46,9 @@ class SenseCAPD1L(unittest.TestCase):
             self.assertNotIn(forbidden, own)
         self.assertEqual(VALUES['CALIBRATION_ON_BOOT'], 'false')
         self.assertEqual(VALUES['AUTO_DIM_TIMEOUT'], '600')
-        self.assertEqual(VALUES['SCREEN_MAX_TILES'], '64')
-        self.assertEqual(VALUES['SCREEN_MAX_PAGES'], '8')
+        self.assertEqual(VALUES['SCREEN_MAX_TILES'], '128')
+        self.assertEqual(VALUES['SCREEN_MAX_PAGES'], '24')
+        self.assertEqual(VALUES['SCREEN_MAX_BAR_ITEMS'], '12')
         self.assertEqual(VALUES['LVGL_BUFFER_SIZE'], '12%')
         self.assertNotIn('set_raw_correction', SOURCE)
 
@@ -67,7 +68,8 @@ class SenseCAPD1L(unittest.TestCase):
         shape = shapes['sensecapd1l']
         self.assertEqual((shape['width'], shape['height']), (480, 480))
         self.assertEqual((shape['columns'], shape['rows']), (2, 3))
-        self.assertEqual((shape['max_tiles'], shape['max_pages']), (64, 8))
+        self.assertEqual((shape['max_tiles'], shape['max_pages']), (128, 24))
+        self.assertEqual(shape['max_bar_items'], 12)
         self.assertEqual(shape['catalog']['touch'], 'FT6336U')
         self.assertEqual(shape['catalog']['status'], 'experimental')
         self.assertIn('(GX)', shape['catalog']['model'])

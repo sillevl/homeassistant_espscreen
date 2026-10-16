@@ -111,9 +111,11 @@ the plugin round alone: a layout with a plugin tile on page 1 and on page 2 and 
 plugin's tap action, then every moment in the order the API promises them. The hello names the plugin; create, then
 state, then tick; new data reaches `on_state` without a new object, and so do two days of 96 prices (a full 2.6 KB
 `x`, as a tile of an entity gets them); dark and light reach `on_theme`; the plugin's question is answered through the
-screen's inbox and reaches `on_message`, also as a mapped answer of 96 prices; a finger on the tile reaches `on_tap` and
-`on_touch` and opens the plugin's card, which closes with the cards; the tap action opens the card with the sensor's
-entity; page 2 and back count the tile objects made and deleted; standby reaches `on_standby` both ways. The self test
+screen's inbox and reaches `on_message`, also as a mapped answer of 96 prices; a finger on the tile reaches `on_press`, `on_tap` and
+`on_touch` and opens the plugin's card, which closes with the cards; on a board with pictures the card's place asks
+for its picture as a card (plugin API 0.13), the harness answers as the app does and the piece shows on the place, and
+with `KEPT_PAGES_HOST=1` the store holds it while the card is open and frees it when the card closes; a board without
+pictures asks for none; the tap action opens the card with the sensor's entity, which asks again for it; page 2 and back count the tile objects made and deleted; standby reaches `on_standby` both ways. The self test
 runs on the layout too. Run it twice, after any change to `plugin_host.cpp`, `plugin_api.h` or the receiver's plugin
 fields (docs/PLUGINS.md): plain, where every host program makes a card anew when its page comes back, as the CYD does,
 and with `KEPT_PAGES_HOST=1`, the path a board with PSRAM takes (docs/KEPT_PAGES.md), where the kept card shows again

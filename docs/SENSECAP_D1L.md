@@ -25,13 +25,13 @@ do not establish which sensors are fitted to a particular unit.
 - Board file: `packages/boards/seeed-sensecap-indicator-d1l.yaml`.
 - Checkout entry: `checkout/sensecapd1l.yaml`, generated from `boards.yaml`.
 - Standard look at 171.85 dpi, rounded to 172 dpi in catalog metadata.
-- Default 2×3 grid and the conservative core limits of 64 tiles across 8 pages.
+- Default 2×3 grid, with the S3 PSRAM ceilings of 128 tiles, 24 pages and 12 top bar items.
 - LVGL draw buffer 12%, an eighth of the frame under the ESPHome buffer rules.
 - Octal PSRAM 80 MHz and shared S3-RGB hardware settings.
 - No camera-picture or snapshot feature enabled in this initial profile.
 
-These limits preserve the initial hardware configuration rather than claiming the capacity of
-other S3 boards. A larger or image-heavy layout requires separate memory and stability validation.
+These are the shared S3 PSRAM ceilings, not a measured guarantee for a full layout on this board.
+The runtime memory budget still applies. Large layouts require separate memory and stability validation.
 
 ### Wiring
 

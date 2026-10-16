@@ -19,7 +19,7 @@ on the screen itself, and how updates work.
 
 ## What you can configure
 
-The experimental [Seeed SenseCAP Indicator D1L GX](docs/SENSECAP_D1L.md) starts with a 2 × 3 grid and conservative limits of 64 tiles across eight pages. Its initial profile covers Wi-Fi, display and touch, without camera pictures, LoRa or RP2040 peripherals.
+The experimental [Seeed SenseCAP Indicator D1L GX](docs/SENSECAP_D1L.md) starts with a 2 × 3 grid and the S3 PSRAM ceilings of 128 tiles across 24 pages, with 12 top bar items. Full-capacity layouts still need hardware acceptance. Its initial profile covers Wi-Fi, display and touch, without camera pictures, LoRa or RP2040 peripherals.
 
 - **One tile per cell**, across up to eight fixed pages and 64 tiles, or more on a board with PSRAM (up to 128 tiles on
   24 pages on an ESP32-S3 board, 256 on 16 pages on the larger ESP32-P4 boards, firmware 0.34.0+), as many as the screen's memory

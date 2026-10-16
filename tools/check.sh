@@ -213,6 +213,8 @@ firmware_preview() {
   node web/wasm/test_weather_detail.mjs || return 1
   # The grid a layout brings (firmware 0.53.0+): begin changes it, a card per cell, a grid it does not take refused.
   node web/wasm/test_grid.mjs || return 1
+  # The firmware's own Settings page in the preview: hold, Extras, a write only with Taps control devices, Back.
+  node web/wasm/test_settings.mjs || return 1
 }
 editor_build() { cd "$ROOT/web" && npm run build; }
 
